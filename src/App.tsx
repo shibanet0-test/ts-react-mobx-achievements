@@ -1,4 +1,5 @@
 import React from "react";
+import ChangeLanguageButton from "./Components/ChangeLanguageButton";
 import PopupContentGetGift from "./Components/GroupPopupContent/PopupContentGetGift";
 import AchievementItem from "./ui-kit/AchievementItem";
 import AchievementList from "./ui-kit/AchievementList";
@@ -10,6 +11,7 @@ function App() {
   return (
     <MainLayout>
       <Layout>
+        <ChangeLanguageButton />
         <Popup
           isVisible
           content={(props) => (

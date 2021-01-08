@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../../ui-kit/Button";
 import { ContentArgs } from "../../../ui-kit/Popup";
 import styled from "styled-components";
+import { Trans, useTranslation } from "react-i18next";
 
 const PopupImage = styled.img`
   width: 200px;
@@ -54,6 +55,7 @@ function PopupContentGetGift({
   onGetGift,
   gift,
 }: PopupContentGetGiftProps) {
+  const { t } = useTranslation();
   return (
     <StyledPopupContentGetGift>
       {gift.img && <PopupImage src={gift.img} />}
@@ -73,9 +75,11 @@ function PopupContentGetGift({
           closePopup();
         }}
       >
-        Participate
+        <Trans t={t}>Participate</Trans>
       </Button>
-      <Button onClick={closePopup}>Later</Button>
+      <Button onClick={closePopup}>
+        <Trans t={t}>Later</Trans>
+      </Button>
     </StyledPopupContentGetGift>
   );
 }
