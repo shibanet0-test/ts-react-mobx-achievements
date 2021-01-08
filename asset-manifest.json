@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ts-react-mobx-achievements/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/ts-react-mobx-achievements/static/js/main.ebe2a8d7.chunk.js",
+    "main.js.map": "/ts-react-mobx-achievements/static/js/main.ebe2a8d7.chunk.js.map",
+    "runtime-main.js": "/ts-react-mobx-achievements/static/js/runtime-main.b0879d25.js",
+    "runtime-main.js.map": "/ts-react-mobx-achievements/static/js/runtime-main.b0879d25.js.map",
+    "static/js/2.5128d8cf.chunk.js": "/ts-react-mobx-achievements/static/js/2.5128d8cf.chunk.js",
+    "static/js/2.5128d8cf.chunk.js.map": "/ts-react-mobx-achievements/static/js/2.5128d8cf.chunk.js.map",
+    "static/js/3.60f9a096.chunk.js": "/ts-react-mobx-achievements/static/js/3.60f9a096.chunk.js",
+    "static/js/3.60f9a096.chunk.js.map": "/ts-react-mobx-achievements/static/js/3.60f9a096.chunk.js.map",
+    "index.html": "/ts-react-mobx-achievements/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/ts-react-mobx-achievements/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.5128d8cf.chunk.js.LICENSE.txt": "/ts-react-mobx-achievements/static/js/2.5128d8cf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0879d25.js",
+    "static/js/2.5128d8cf.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.ebe2a8d7.chunk.js"
+  ]
+}

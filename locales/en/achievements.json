@@ -1,0 +1,47 @@
+{
+  "1": {
+    "title": "Achievement 1 Title",
+    "description": "Achievement 1 Description",
+    "popup": {
+      "type": "Achievement 1 Popup Type",
+      "title": "Achievement 1 Popup Title",
+      "description": "Achievement 1 Popup Title"
+    }
+  },
+  "2": {
+    "title": "Achievement 2 Title",
+    "description": "Achievement 2 Description",
+    "popup": {
+      "type": "Achievement 2 Popup Type",
+      "title": "Achievement 2 Popup Title",
+      "description": "Achievement 2 Popup Title"
+    }
+  },
+  "3": {
+    "title": "Achievement 3 Title",
+    "description": "Achievement 3 Description",
+    "popup": {
+      "type": "Achievement 3 Popup Type",
+      "title": "Achievement 3 Popup Title",
+      "description": "Achievement 3 Popup Title"
+    }
+  },
+  "4": {
+    "title": "Achievement 4 Title",
+    "description": "Achievement 4 Description",
+    "popup": {
+      "type": "Achievement 4 Popup Type",
+      "title": "Achievement 4 Popup Title",
+      "description": "Achievement 4 Popup Title"
+    }
+  },
+  "5": {
+    "title": "Achievement 5 Title",
+    "description": "Achievement 5 Description",
+    "popup": {
+      "type": "Achievement 5 Popup Type",
+      "title": "Achievement 5 Popup Title",
+      "description": "Achievement 5 Popup Title"
+    }
+  }
+}
