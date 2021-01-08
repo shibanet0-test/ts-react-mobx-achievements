@@ -1,13 +1,30 @@
 import React from "react";
+import PopupContentGetGift from "./Components/GroupPopupContent/PopupContentGetGift";
 import AchievementItem from "./ui-kit/AchievementItem";
 import AchievementList from "./ui-kit/AchievementList";
 import Layout from "./ui-kit/Layout";
 import MainLayout from "./ui-kit/MainLayout";
+import Popup from "./ui-kit/Popup";
 
 function App() {
   return (
     <MainLayout>
       <Layout>
+        <Popup
+          isVisible
+          content={(props) => (
+            <PopupContentGetGift
+              gift={{
+                img: `${process.env.PUBLIC_URL}/static/skill.png`,
+                title: "title",
+                type: "type",
+                description: "description",
+              }}
+              onGetGift={() => console.log("onGetGift")}
+              {...props}
+            />
+          )}
+        />
         <AchievementList>
           <AchievementItem
             awardReceiveText="Check prizes"
