@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Progress from "../Progress";
 
@@ -15,7 +16,7 @@ interface AchivementInfo {
 interface AchievementItemProps {
   current: number;
   max: number;
-  info: AchivementInfo;
+  info?: AchivementInfo;
   doneText: string;
 
   isAwardReceived: boolean;
@@ -65,19 +66,25 @@ function AchievementItem({
 }: AchievementItemProps) {
   return (
     <StyledAchievementItem>
-      <AchivementInfo>
-        <AchivementInfoTitle>{info.title}</AchivementInfoTitle>
-        <AchivementInfoDescription>
-          {info.description}
-        </AchivementInfoDescription>
-      </AchivementInfo>
+      {info && (
+        <AchivementInfo>
+          <AchivementInfoTitle>{info.title}</AchivementInfoTitle>
+          <AchivementInfoDescription>
+            {info.description}
+          </AchivementInfoDescription>
+        </AchivementInfo>
+      )}
 
       <Progress
-        text={isAwardReceived ? undefined : awardReceiveText}
+        text={
+          !isAwardReceived && current === max ? awardReceiveText : undefined
+        }
         current={current}
         max={max}
         onClick={
-          isAwardReceived ? undefined : () => onAwardReceive && onAwardReceive()
+          !isAwardReceived && current === max
+            ? () => onAwardReceive && onAwardReceive()
+            : undefined
         }
       />
       <AchivementStatus
@@ -87,6 +94,24 @@ function AchievementItem({
         isDone={current === max}
       />
     </StyledAchievementItem>
+  );
+}
+
+interface AchievementItemI18nProps extends AchievementItemProps {
+  i18nKey: string;
+}
+
+export function AchievementItemI18n(props: AchievementItemI18nProps) {
+  const { t } = useTranslation("achievements");
+
+  return (
+    <AchievementItem
+      {...props}
+      info={{
+        title: t(`${props.i18nKey}.title`),
+        description: t(`${props.i18nKey}.title`),
+      }}
+    />
   );
 }
 

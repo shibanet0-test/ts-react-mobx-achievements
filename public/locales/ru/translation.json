@@ -1,4 +1,10 @@
 {
+  "popup": {
+    "gift": {
+      "Get prizes": "Получить призы"
+    }
+  },
+
   "Change language": "Сменить язык",
   "Later": "Позже",
   "Participate": "Получить"

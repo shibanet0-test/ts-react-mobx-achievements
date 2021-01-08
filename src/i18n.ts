@@ -11,10 +11,10 @@ i18n.init({
   debug: true,
   fallbackLng: ["en"],
   preload: ["en"],
-  ns: ["translation"],
+  ns: ["translation", "pages", "achievements"],
   supportedLngs: ["en", "ru"],
 
-  keySeparator: false, // we do not use keys in form messages.welcome
+  keySeparator: ".", // we do not use keys in form messages.welcome
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
