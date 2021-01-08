@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 
 export interface ContentArgs {
@@ -22,8 +22,8 @@ const PopupBackground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(5px);
 `;
 
@@ -34,23 +34,15 @@ const PopupContainer = styled.div`
 `;
 
 export default function Popup({ content, isVisible, onClose }: PopupProps) {
-  const [visible, setVisible] = useState(isVisible);
+  const handleClose = useCallback(() => onClose && onClose(), [onClose]);
 
-  useEffect(() => {
-    setVisible(isVisible);
-  }, [isVisible]);
-
-  const handleClose = useCallback(() => {
-    setVisible(false);
-  }, []);
-
-  if (!visible) {
+  if (!isVisible) {
     return null;
   }
 
   return (
-    <PopupBackground>
-      <PopupContainer onClick={() => onClose && onClose()}>
+    <PopupBackground data-background="">
+      <PopupContainer onClick={handleClose} data-container="">
         <StyledPopup>
           {content ? content({ closePopup: handleClose }) : null}
         </StyledPopup>

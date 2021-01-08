@@ -38,6 +38,7 @@ const ProgressText = styled.div`
   transform: translate(-50%, -50%);
   color: #241d4b;
   font-weight: bold;
+  pointer-events: none;
 `;
 
 export default function Progress({
